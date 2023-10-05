@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MailingAppMVC.Models.Domains.SendedEmail>
+
+
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-hover table-striped mt-3 mb-5">
+        <thead>
+            <tr>
+                <th scope="col">Nadawca</th>
+                <th scope="col">Odbiorca</th>
+                <th scope="col">Tytuł</th>
+                <th scope="col">Treść</th>
+                <th scope="col">Data wysłania</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var SendedEmail in Model)
+            {
+                <tr>
+                    <td>@SendedEmail.SenderName</td>
+                    <td>@SendedEmail.Email</td>
+                    <td>@SendedEmail.Title</td>
+                    <td>@SendedEmail.Body</td>
+                    <td>@SendedEmail.SendedDate.ToString("dd-MM-yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div>
+        Brak maili do wyświetlenia
+    </div>
+}
