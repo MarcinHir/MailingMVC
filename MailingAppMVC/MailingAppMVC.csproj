@@ -327,16 +327,6 @@
     <Content Include="Scripts\jquery-3.7.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ReportService\Cipher\Cipher.csproj">
-      <Project>{c3e50b31-aa67-4b6a-8bd1-f67225161bc9}</Project>
-      <Name>Cipher</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ReportService\EmailSender\EmailSender.csproj">
-      <Project>{a891817c-e3fe-4e3b-b30c-48f202ef4497}</Project>
-      <Name>EmailSender</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Migrations\202309201827234_FirstSet.resx">
       <DependentUpon>202309201827234_FirstSet.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +336,16 @@
     <EmbeddedResource Include="Migrations\202310042105463_DBUpdate1.0.resx">
       <DependentUpon>202310042105463_DBUpdate1.0.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cipher\Cipher.csproj">
+      <Project>{8f1b71e9-7073-49dd-a9e5-81c776171a90}</Project>
+      <Name>Cipher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailSender\EmailSender.csproj">
+      <Project>{ee3e470e-c938-4914-a0e7-88690ec1dae4}</Project>
+      <Name>EmailSender</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
